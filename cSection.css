@@ -1,0 +1,419 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Rubik';
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: hsl(228, 33%, 97%);
+}
+
+.main{
+    width: 730px;
+    max-width: 100%;
+    margin-top: 50px;
+}
+
+.commentsHolder{
+    display: flex;
+    gap: 24px;
+    padding: 22px;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.commentsRight{
+    margin-left: 42px;
+    padding-left: 26px;
+    border-left: 2px solid hsl(223, 19%, 93%);
+}
+
+
+.scoreHolder{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    width: 44px;
+    height: auto;
+    max-height: 100px;
+    border-radius: 10px;
+    color: hsl(238 40% 52%);
+    background-color: hsl(228, 33%, 97%);
+}
+
+.buttonScore{
+    border: 0;
+    height: -webkit-fill-available;
+    background: transparent;
+    cursor: pointer;
+}
+
+.buttonScore:hover{
+    color: hsl(238 40% 52%);
+}
+
+.buttonScore:hover .buttonImg {
+    filter: brightness(0) saturate(100%) invert(50%) sepia(6%) saturate(4368%) hue-rotate(203deg) brightness(79%) contrast(84%);
+}
+
+.buttonImg{
+    width: 12px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.header-data{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-heading{
+    font-size: 16px;
+}
+
+.you{
+    font-size: 14px;
+    padding: 1px 6px;
+    border-radius: 2px;
+    color: white;
+    background-color: rgb(83, 88, 182);
+}
+
+.date{
+    color: hsl(211, 10%, 45%);
+}
+
+.edit-delete{
+    display: flex;
+    gap: 25px;
+}
+
+.edit-delete-holder{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#delete{
+    color: hsl(358, 79%, 66%);
+}
+
+.editText{
+    color: rgb(83, 88, 182);
+}
+
+.commentText{
+    max-width: 615px;
+    line-height: 24px;
+    color: hsl(211, 10%, 45%);
+}
+
+.content{
+    width: -webkit-fill-available;
+}
+
+.replyButtonHolder{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.replyHolder:hover .replyButton{
+    opacity: 0.6;
+}
+
+.replyHolder:hover .replyText{
+    opacity: 0.6;
+}
+
+.replyButton{
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.replyText{
+    font-weight: 700;
+    color: rgb(83,88,182);
+    transition: 0.2s;
+}
+
+.avatar{
+    width: 34px; 
+    height: 34px; 
+    border-radius: 50%;
+}
+
+.avatarReply{
+    width: 34px; 
+    height: 34px; 
+}
+
+.avatarCreate{
+    width: 40px;
+    height: 40px;
+}
+
+.reply{
+    margin-left: 20px;
+}
+
+.editActiveHolder{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.saveEdit{
+    align-self: flex-end;
+}
+
+.main-bottom{
+    display: flex;
+    gap: 20px;
+    padding: 28px 24px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.textarea{
+    font-size: 16px;
+    width: 74%;
+    height: 90px;
+    padding: 14px 24px;
+    border: 1px solid hsl(223, 19%, 93%);
+    border-radius: 10px;
+    color: hsl(211, 10%, 45%);
+    resize: none;
+}
+
+.editTextarea{
+    width: -webkit-fill-available;
+    padding: 10px 15px;
+}
+
+.send{
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 105px;
+    height: 50px;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(83, 88, 182);
+    cursor: pointer;
+}
+
+.deletePopupHolder{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    max-width: 100%;
+    width: 100%;
+    background-color: hsl(0deg 0% 0% / 16%);
+}
+
+.deletePopup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 32px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.delete-h1{
+    font-size: 23px;
+    color: hsl(212, 24%, 26%);
+}
+
+.delete-p{
+    line-height: 24px;
+    margin: 20px 0;
+    color: hsl(211, 10%, 45%);
+}
+
+.deleteButtonsPopup{
+    display: flex;
+    gap: 16px;
+}
+
+.popUp-option{
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    flex-grow: 1;
+    height: 50px;
+    border: 0;
+    border-radius: 8px;
+    color: white;
+    background-color: hsl(211, 10%, 45%);
+    cursor: pointer;
+}
+
+.popUp-option:last-child{
+    background-color: hsl(358, 79%, 66%);
+}
+
+.marginBottom{
+    height: 50px;
+}
+
+.hidden{
+    display: none;
+}
+
+@media screen and (max-width: 750px){
+    .main{
+        max-width: 96%;
+    }
+
+    .commentsHolder{
+        padding: 16px;
+    }
+
+    .commentsRight {
+        margin-left: 30px;
+        padding-left: 18px;
+    }    
+
+    .header-data{
+        gap: 10px;
+    }
+    
+    .edit-delete{
+        gap: 16px;
+    }
+}
+
+@media screen and (max-width: 625px){
+    .commentsHolderScore{
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+    }
+
+    .commentsRight{
+        margin-left: 22px;
+        padding-left: 5px;
+    }
+
+    .scoreHolder{
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100px;
+        height: 40px;
+    }
+
+    .edit-delete{
+        position: absolute;
+        right: 16px;
+        bottom: 27.5px;
+    }
+
+    .main-bottom{
+        gap: 16px;
+        padding: 20px 16px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .commentsHolderScore{
+        margin-left: 10px;
+    }
+
+    .commentsRight{
+        margin-left: 16px;
+    }
+
+    .main-bottom{
+        gap: 16px;
+        padding: 15px 12px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .deletePopup{
+        max-width: 320px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .main{
+        max-width: 97%;
+    }
+
+    .header-data{
+        font-size: 14px;
+    }
+
+    .header-heading{
+        font-size: 12px;
+    }
+
+    .commentsHolderScore{
+        margin-left: 8px;
+    }
+
+    .commentsRight{
+        margin-left: 14px;
+    }
+
+    .main-bottom{
+        gap: 8px;
+        padding: 12px 8px;
+    }
+
+    .deletePopup{
+        max-width: 275px;
+    }
+}
+
+@media screen and (max-width: 340px){
+    .main{
+        max-width: 97%;
+    }
+
+    .commentsHolderScore{
+        margin-left: 6px;
+    }
+
+    .commentsRight{
+        margin-left: 12px;
+    }
+
+    .edit-delete{
+        gap: 10px;
+    }
+
+    .main-bottom{
+        gap: 8px;
+        padding: 12px 8px;
+    }
+}
