@@ -48,6 +48,10 @@ body{
     background-color: hsl(228, 33%, 97%);
 }
 
+.clicked{
+    filter: brightness(0) saturate(100%) invert(50%) sepia(6%) saturate(4368%) hue-rotate(203deg) brightness(79%) contrast(84%);
+}
+
 .buttonScore{
     border: 0;
     height: -webkit-fill-available;
